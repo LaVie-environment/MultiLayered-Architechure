@@ -8,3 +8,4 @@ The networking module provisions all networking-related components of the web ap
 It takes the namespace as an input and outputs vpc, and security group.
 
 Resources declared at the top of the module have the fewest dependencies, while resources declared at the bottom have the most dependencies.
+
