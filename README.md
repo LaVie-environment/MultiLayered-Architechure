@@ -12,3 +12,6 @@ Resources declared at the top of the module have the fewest dependencies, while 
 The VPC and the db security group IDs which are outputs of the networking module are passed to the database module. Data are passed to the db module by bubbling up from the networking module into the root module and then trickling down into the database module.
 
 The root module declares component modules and allows those components modules to pass data between themselves.
+
+The autoscaling module provisions the autoscaling group, load balancer, Identity and Access Management (IAM) instance role and everything else the web server needs to run.
+The three input variables of the autoscaling module are vpc, sg, and db_config. The vpc, and sg come from the networkng module, while db_config comes from the database module.
