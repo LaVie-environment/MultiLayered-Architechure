@@ -9,3 +9,6 @@ It takes the namespace as an input and outputs vpc, and security group.
 
 Resources declared at the top of the module have the fewest dependencies, while resources declared at the bottom have the most dependencies.
 
+The VPC and the db security group IDs which are outputs of the networking module are passed to the database module. Data are passed to the db module by bubbling up from the networking module into the root module and then trickling down into the database module.
+
+The root module declares component modules and allows those components modules to pass data between themselves.
