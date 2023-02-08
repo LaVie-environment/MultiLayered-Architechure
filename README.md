@@ -18,3 +18,6 @@ The three input variables of the autoscaling module are vpc, sg, and db_config. 
 
 Using a cloudinit_config data source to create the launch template's user data.
 The launch template bundles together user data, the MI ID, and other metadata
+
+The result of the templatefile function is passed into the cloudinit_config data source and then used to configure the aws_template resource.
+The templatefile function accepts two arguments: a path and a variable object.
