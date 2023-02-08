@@ -4,5 +4,5 @@
     }
 
     output "lb_dns_name" {
-        value = "tbd"
+        value = module.autoscaling.lb_dns_name
     }
